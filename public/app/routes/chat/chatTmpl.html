@@ -1,0 +1,10 @@
+<input type="text" name="Message" placeholder="Message..." ng-model="chat.message">
+<button type="button" ng-click="addMessage(chat, user.name)">Submit Message</button>
+
+<hr>
+<br><br>
+
+<div ng-repeat="chat in chats">
+  {{getUsername(chat.sender)}}: {{chat.message}}
+  <br>{{chat.posted | date: 'shortDate'}}
+</div>
